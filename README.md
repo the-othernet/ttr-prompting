@@ -14,12 +14,15 @@ A simple yet effective prompting strategy for improved LLM reasoning.
 |-------|--------|
 | GPT-4 | 92.3% |
 | **Llama 3.1 405B (TTR)** | **91.7%** |
-| DeepSeek R1 (64 attempts) | 90.8% |
+| DeepSeek R1 (pass@1) | 90.8% |
 | DeepSeek V3 | 88.5% |
 | Claude 3.5 Sonnet | 88.3% |
 | GPT-4 0513 | 87.2% |
 
-Notable that TTR achieves 91.7% with a single pass, compared to DeepSeek R1's 90.8% which requires 64 attempts per question.
+Results obtained on the complete MMLU benchmark test set (100k questions across 57 subjects), with only the order of questions randomized. 
+
+Notable that TTR achieves 91.7% with a single deterministic pass, compared to DeepSeek R1's 90.8% which uses sampling with temperature 0.6 and top-p 0.95 to generate 64 responses per question for pass@1 evaluation.
+
 
 ## Implementation
 
@@ -84,6 +87,13 @@ Testing performed on Lambda Labs cloud instance:
 - Base Model: Meta Llama 3.1 405B
 - Quantization: AWQ-INT4
 - Size: 4-bit quantized version of the 405B parameter model
+
+## Data Files
+
+Required dataset and reference files are available from our [Hugging Face repository](https://huggingface.co/datasets/theothernet/ttr-prompting/tree/main):
+
+- `mmlu_scrambled.jsonl` (163 MB) - Scrambled MMLU dataset used for testing
+- `output_MMLU_llama31_405B_AWQINT4.txt` (302 MB) - Complete output log provided for reference, showing all questions, reasoning steps, and accuracy achieved in our tests
 
 ## Usage
 
