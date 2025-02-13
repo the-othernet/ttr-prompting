@@ -12,7 +12,7 @@ A simple yet effective prompting strategy for improved LLM reasoning.
 
 | Model | Score |
 |-------|--------|
-| OpenAI o3 | 92.3% |
+| GPT-4 | 92.3% |
 | **Llama 3.1 405B (TTR)** | **91.7%** |
 | DeepSeek R1 (64 attempts) | 90.8% |
 | DeepSeek V3 | 88.5% |
@@ -80,14 +80,26 @@ Testing performed on Lambda Labs cloud instance:
 - Cost: $14.32/hr ($1.79/GPU/hr)
 
 ## Model Details
-- Model: Meta-Llama-3.1-405B-Instruct
+- Model: [Meta-Llama-3.1-405B-Instruct-AWQ-INT4](https://huggingface.co/hugging-quants/Meta-Llama-3.1-405B-Instruct-AWQ-INT4)
+- Base Model: Meta Llama 3.1 405B
 - Quantization: AWQ-INT4
+- Size: 4-bit quantized version of the 405B parameter model
 
 ## Usage
 
 1. Clone this repository
 2. Install requirements: `pip install -r requirements.txt`
-3. Run: `python src/main.py <num_threads>`
+3. Start VLLM server:
+```bash
+python -m vllm.entrypoints.api_server \
+    --model /path/to/llama/model \
+    --quantization awq \
+    --dtype float16 \
+    --gpu-memory-utilization 0.9
+```
+4. Run test: `python src/main.py <num_threads>`
+
+Note: This requires VLLM to be properly installed and configured on your machine with GPU support.
 
 ## License
 
