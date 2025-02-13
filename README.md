@@ -26,11 +26,11 @@ Notable that TTR achieves 91.7% with a single deterministic pass, compared to De
 
 ## Implementation
 
-The approach uses two prompts:
+The approach uses two prompts (with the generated thoughts being fed into the final output prompt):
 ```python
-thought_prompt = "How should you best think about this? Explain your thought process step by step."
+thoughtPrompt = "How should you best think about this? Explain your thought process step by step."
 
-output_format = "Output only a single digit representing your choice (with no additional commentary)"
+outputPrompt = "Output only a single digit representing your choice (with no additional commentary)"
 ```
 
 ## Example Outputs
