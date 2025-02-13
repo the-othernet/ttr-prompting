@@ -86,7 +86,6 @@ Testing performed on Lambda Labs cloud instance:
 - Model: [Meta-Llama-3.1-405B-Instruct-AWQ-INT4](https://huggingface.co/hugging-quants/Meta-Llama-3.1-405B-Instruct-AWQ-INT4)
 - Base Model: Meta Llama 3.1 405B
 - Quantization: AWQ-INT4
-- Size: 4-bit quantized version of the 405B parameter model
 
 ## Data Files
 
