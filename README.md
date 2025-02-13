@@ -88,7 +88,7 @@ Testing performed on Lambda Labs cloud instance:
 
 ## Data Files
 
-Required dataset and reference files are available from our [Hugging Face repository](https://huggingface.co/datasets/theothernet/ttr-prompting/tree/main):
+Available from our [Hugging Face repository](https://huggingface.co/datasets/theothernet/ttr-prompting/tree/main):
 
 - `mmlu_scrambled.jsonl` (163 MB) - Scrambled MMLU dataset used for testing
 - `output_MMLU_llama31_405B_AWQINT4.txt` (302 MB) - Complete output log provided for reference, showing all questions, reasoning steps, and accuracy achieved in our tests
