@@ -25,7 +25,7 @@ Results obtained on the complete MMLU benchmark test set (100k questions across 
 
 ## Implementation
 
-The approach uses two prompts (with the generated thoughts being fed into the final output prompt):
+The approach uses two prompts (with the thoughts from step one being fed into the final output prompt):
 ```python
 thoughtPrompt = "How should you best think about this? Explain your thought process step by step."
 
