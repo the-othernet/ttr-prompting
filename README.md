@@ -19,10 +19,9 @@ A simple yet effective prompting strategy for improved LLM reasoning.
 | Claude 3.5 Sonnet | 88.3% |
 | GPT-4 0513 | 87.2% |
 
-Results obtained on the complete MMLU benchmark test set (100k questions across 57 subjects), with only the order of questions randomized. 
-
 Notable that TTR achieves 91.7% with a single deterministic pass, compared to DeepSeek R1's 90.8% which uses sampling with temperature 0.6 and top-p 0.95 to generate 64 responses per question for pass@1 evaluation.
 
+Results obtained on the complete MMLU benchmark test set (100k questions across 57 subjects) with the order of questions randomized. 
 
 ## Implementation
 
