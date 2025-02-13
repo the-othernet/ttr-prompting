@@ -12,7 +12,7 @@ A simple yet effective prompting strategy for improved LLM reasoning.
 
 | Model | Score |
 |-------|--------|
-| GPT-4 | 92.3% |
+| OpenAI o3 | 92.3% |
 | **Llama 3.1 405B (TTR)** | **91.7%** |
 | DeepSeek R1 (64 attempts) | 90.8% |
 | DeepSeek V3 | 88.5% |
