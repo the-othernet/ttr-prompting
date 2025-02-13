@@ -5,7 +5,7 @@ A simple yet effective prompting strategy for improved LLM reasoning.
 ## Overview
 
 **TTR (Think Then Respond)** is a two-stage prompting approach that guides language models to:
-1. Think through their reasoning step by step
+1. Think about the prompt
 2. Provide a final response based on that reasoning
 
 ## Results on MMLU
